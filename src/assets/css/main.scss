@@ -1,0 +1,131 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+#root,
+.App,
+body,
+html {
+  height: 100vh;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  overflow-y: hidden;
+}
+
+.App {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.purple-btn {
+  display: flex;
+  color: #fff;
+  border: none;
+  width: 150px;
+  font-size: 13px;
+  margin-top: 2rem;
+  padding: 14px 0;
+  font-weight: 600;
+  border-radius: 50px;
+  align-items: center;
+  transition: ease-in 0.1s;
+  justify-content: center;
+  background-color: #717aef;
+  box-shadow: 1px 4px 11px 1px #9dabef8e;
+
+  &:hover {
+    cursor: pointer;
+    transform: scale(1.02);
+  }
+}
+
+.start-quiz {
+  display: flex;
+  padding: 1.75rem;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 8px;
+  background-color: #fff;
+  border: 2px solid #6d75f587;
+
+  .purple-btn {
+    margin-top: 1rem;
+  }
+
+  .title {
+    margin: 0;
+    padding: 0;
+    font-size: 24px;
+    color: #354f6b;
+  }
+
+  .desc {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-size: 16px;
+    margin-top: 1rem;
+    color: #354f6b;
+  }
+}
+
+.search-box-wrapper {
+  width: 50%;
+  min-height: 60%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  .search-box-title {
+    padding: 14px;
+    display: flex;
+    color: #fff;
+    font-size: 15px;
+    border-radius: 50px;
+    align-items: center;
+    justify-content: center;
+    background-color: #717aef;
+    margin-top: -26px;
+    z-index: 1;
+  }
+
+  .search-input-wrapper {
+    width: 375px;
+    margin-bottom: 40px;
+
+    .search {
+      width: 100%;
+      position: relative;
+      display: flex;
+
+      .searchTerm {
+        width: 100%;
+        border: 2px solid #717aef;
+        border-right: none;
+        padding: 5px;
+        height: 20px;
+        border-radius: 5px 0 0 5px;
+        outline: none;
+        color: #9dbfaf;
+      }
+
+      .searchTerm:focus {
+        color: #717aef;
+      }
+
+      .searchButton {
+        height: 34px;
+        border: 2px solid #717aef;
+        background: #717aef;
+        text-align: center;
+        color: #fff;
+        border-radius: 0 5px 5px 0;
+        cursor: pointer;
+        font-size: 20px;
+        cursor: pointer;
+      }
+    }
+  }
+}
