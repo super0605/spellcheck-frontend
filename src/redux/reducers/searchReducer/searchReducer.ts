@@ -4,7 +4,7 @@ import { SearchActions, SearchState } from "../../types/searchTypes";
 
 const initialState: SearchState = {
   pending: false,
-  correct: false,
+  correct: null,
   suggestions: [],
   error: null,
 };

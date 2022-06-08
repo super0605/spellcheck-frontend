@@ -4,7 +4,7 @@ import { searchTypes } from "../Actiontypes/searchTypes";
 // Search types
 export interface SearchState {
   pending: boolean;
-  correct: boolean;
+  correct: boolean | null;
   suggestions: ISuggestion[];
   error: string | null;
 }

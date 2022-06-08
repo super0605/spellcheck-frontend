@@ -3,9 +3,10 @@ import React from "react";
 interface SearchInputProps {
   query: string;
   onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  onSubmit: () => void;
 }
 
-const SearchInput = ({ query, onChange }: SearchInputProps) => {
+const SearchInput = ({ query, onChange, onSubmit }: SearchInputProps) => {
   return (
     <div className="search-input-wrapper">
       <div className="search">
@@ -16,7 +17,7 @@ const SearchInput = ({ query, onChange }: SearchInputProps) => {
           value={query}
           onChange={(e) => onChange(e)}
         />
-        <button type="submit" className="searchButton">
+        <button type="submit" className="searchButton" onClick={onSubmit}>
           Search
         </button>
       </div>

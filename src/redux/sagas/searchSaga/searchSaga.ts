@@ -7,14 +7,14 @@ import {
 import { searchTypes } from "../../Actiontypes/searchTypes";
 
 const getSearchResult = (queryParam: string) =>
-  axios.get<any>(`http://localhost:31337/spell/${queryParam}`);
+  axios.get<any>(`http://127.0.0.1:31337/spellcheck/${queryParam}`);
 
-function* fetchSearchSaga({ searchTerm }: any): any {
+function* fetchSearchSaga({ payload }: any): any {
   try {
-    const response = yield call(getSearchResult, searchTerm);
+    const response = yield call(getSearchResult, payload.searchTerm);
     yield put(
       fetchSearchSuccess({
-        searchResult: response.data.result,
+        searchResult: response.data.data,
       })
     );
   } catch (e: any) {

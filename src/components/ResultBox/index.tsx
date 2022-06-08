@@ -11,7 +11,14 @@ const ResultBox = ({ correct, suggestions }: ResultBoxProps) => {
       <div className="correctness-result">
         Correct: {correct ? "True" : "False"}
       </div>
-      {suggestions.length > 0 && <h3>Suggestions List</h3>}
+      <h3>
+        Suggestions List{": "}
+        {suggestions.length > 0 ? (
+          <span>{suggestions.length}</span>
+        ) : (
+          <span>[]</span>
+        )}
+      </h3>
       <ul className="suggestions-list">
         {suggestions.map((suggestion, index) => (
           <li key={index} className="suggestion-item">
