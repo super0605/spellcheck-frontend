@@ -1,4 +1,4 @@
-# React OutDefine Code Challenge
+# React SpellCheck SPA
 
 This is a OutDefine code challenge, that was created using Typescript and ReactJS library.
 
